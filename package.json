@@ -44,15 +44,21 @@
   },
   "typings": "dist/main.d.ts",
   "dependencies": {},
+  "peerDependenciesMeta": {
+    "eslint": {
+      "optional": true
+    }
+  },
   "optionalDependencies": {},
   "devDependencies": {
+    "@commitlint/config-conventional": "latest",
     "eslint-config-strict-mode": "latest",
     "git-cz-emoji": "latest",
+    "handlebars-helpers": "latest",
+    "prettier": "^2.4.1",
     "prettier-config-sexy-mode": "latest",
     "semantic-release-config": "latest",
-    "typescript": "^4.5.5",
-    "@commitlint/config-conventional": "latest",
-    "handlebars-helpers": "latest"
+    "typescript": "^4.5.5"
   },
   "keywords": [
     "ci",
@@ -73,7 +79,7 @@
     "node": ">=14.18.0"
   },
   "publishConfig": {
-    "@gitlab:registry": "https://gitlab.com/api/v4/projects//packages/npm/",
+    "@gitlab:registry": "https://gitlab.com/api/v4/projects/32219574/packages/npm/",
     "@megabyte:registry": "https://gitlab.com/api/v4/projects//packages/npm/",
     "access": "public",
     "registry": "https://registry.npmjs.org/",
@@ -98,6 +104,8 @@
       "codeclimate": "197M"
     },
     "github_id": "R_kgDOHRvrZg",
+    "gitlab_group_id": "14556970",
+    "gitlab_project_id": "32219574",
     "group": "docker",
     "name": "Ansible Lint",
     "overview": "This project is the home of an [Ansible Lint](https://github.com/ansible-community/ansible-lint) [CodeClimate](https://codeclimate.com/) engine. It was built to integrate Ansible Lint results into the GitLab merge request web UI. This project builds multiple types of containers. It builds a CodeClimate engine and a standalone linter. Both of these types are available as slim builds.",
@@ -108,9 +116,7 @@
     "slug": "ansible-lint",
     "subgroup": "codeclimate",
     "title": "Ansible Lint CodeClimate Engine",
-    "versionCommand": "docker run -it megabytelabs/ansible-lint:latest --version | sed 's/^[^ ]* //' | sed 's/ .*$//'",
-    "gitlab_project_id": "32219574",
-    "gitlab_group_id": "14556970"
+    "versionCommand": "docker run -it megabytelabs/ansible-lint:latest --version | sed 's/^[^ ]* //' | sed 's/ .*$//'"
   },
   "changelog": {
     "displayTypes": [
@@ -123,7 +129,9 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
   "engine": "node >= 0.12.4",
@@ -268,5 +276,9 @@
       }
     ],
     "extends": "semantic-release-config"
+  },
+  "volta": {
+    "node": "18.4.0",
+    "yarn": "1.22.19"
   }
 }
