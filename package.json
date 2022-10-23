@@ -89,7 +89,7 @@
     "codeClimateLanguages": [
       "YAML"
     ],
-    "description": "An Ansible Lint slim container and a CodeClimate engine container for GitLab CI",
+    "description": "An Ansible Lint slim container and a CodeClimate engine container with support for GitLab CI",
     "dockerBaseTag": "ansible-lint",
     "dockerLatestSize": {
       "ansible-lint": "157M",
