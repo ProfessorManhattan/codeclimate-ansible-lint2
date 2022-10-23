@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+# Use .config/ansible-lint.yml if it is present otherwise use /config.json
+# which is injected from the configuration specified in .codeclimate.yml
 if [ -f .config/ansible-lint.yml ]; then
   CONFIG=".config/ansible-lint.yml"
 else
