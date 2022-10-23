@@ -57,7 +57,7 @@ ARG VERSION
 LABEL maintainer="Megabyte Labs <help@megabyte.space>"
 LABEL org.opencontainers.image.authors="Brian Zalewski <brian@megabyte.space>"
 LABEL org.opencontainers.image.created=$BUILD_DATE
-LABEL org.opencontainers.image.description="An Ansible Lint slim container and a CodeClimate engine container for GitLab CI"
+LABEL org.opencontainers.image.description="An Ansible Lint slim container and a CodeClimate engine container with support for GitLab CI"
 LABEL org.opencontainers.image.documentation="https://github.com/megabyte-labs/codeclimate-ansible-lint/blob/master/README.md"
 LABEL org.opencontainers.image.licenses="MIT"
 LABEL org.opencontainers.image.revision=$REVISION

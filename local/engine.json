@@ -1,5 +1,5 @@
 {
-  "description": "An Ansible Lint slim container and a CodeClimate engine container for GitLab CI",
+  "description": "An Ansible Lint slim container and a CodeClimate engine container with support for GitLab CI",
   "languages": ["YAML"],
   "maintainer": {
     "email": "help@megabyte.space",
